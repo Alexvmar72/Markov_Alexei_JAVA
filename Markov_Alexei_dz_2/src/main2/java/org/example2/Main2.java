@@ -1,8 +1,8 @@
-package org.example;
+package org.example2;
 
 import java.util.Objects;
 
-public class Main {
+public class Main2 {
     public static void main(String[] args){
         String query_string = "select * from students where";
         String sql_str = "\"name\":\"Ivanov\", \"country\":\"Russia\", \"city\":\"Moscow\", \"age\":\"null\"";
