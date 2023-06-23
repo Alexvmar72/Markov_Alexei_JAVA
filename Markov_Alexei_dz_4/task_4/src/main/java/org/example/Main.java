@@ -135,6 +135,7 @@ public class Main {
                 "5 - Сортировка списка пользователей по полу\n";
 
         System.out.println(startMenu);
+        System.out.print("Ваш выбор: ");
         String run_command = scanner.nextLine();
         if (!Objects.equals(run_command, "1")
                 && !Objects.equals(run_command, "2")
@@ -155,10 +156,13 @@ public class Main {
                     break;
                 case "3":
                     CreateSortArray(CountSizeArray(), 0);
+                    break;
                 case "4":
                     CreateSortArray(CountSizeArray(), 1);
+                    break;
                 case "5":
                     CreateSortArray(CountSizeArray(), 2);
+                    break;
             }
         }
     }
