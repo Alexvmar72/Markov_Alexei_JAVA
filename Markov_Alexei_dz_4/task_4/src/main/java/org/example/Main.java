@@ -8,9 +8,9 @@ import java.util.*;
 
 public class Main {
 
-    public static List<String> Array_Users() {
+    public static List<String> Array_Users(Scanner scanner) {
         List<String> all_users = new ArrayList<>();
-        Scanner scanner = new Scanner(System.in);
+
         boolean run = true;
         while (run) {
             StringBuilder resultUser = new StringBuilder();
@@ -36,7 +36,7 @@ public class Main {
                 run = false;
             }
         }
-        scanner.close();
+
         return all_users;
     }
     public static void SaveInFile(List<String> array_save) throws Exception {
@@ -125,9 +125,47 @@ public class Main {
         //System.out.println(Arrays.deepToString(BuildArray));
     }
 
+    public static void Command(Scanner scanner) throws Exception {
+        String startMenu = "Добрый день! Программа создания списка пользователей\n" +
+                "Для работы программы выберите:\n" +
+                "1 - Записать нового пользователя\n" +
+                "2 - Вывод списка пользователей\n" +
+                "3 - Сортировка списка пользователей по имени\n" +
+                "4 - Сортировка списка пользователей по году\n" +
+                "5 - Сортировка списка пользователей по полу\n";
+
+        System.out.println(startMenu);
+        String run_command = scanner.nextLine();
+        if (!Objects.equals(run_command, "1")
+                && !Objects.equals(run_command, "2")
+                && !Objects.equals(run_command, "3")
+                && !Objects.equals(run_command, "4")
+                && !Objects.equals(run_command, "5")
+
+        ){
+            System.out.println("Введите команду из меню\n");
+
+        } else {
+            switch (run_command) {
+                case "1":
+                    SaveInFile(Array_Users(scanner));
+                    break;
+                case "2":
+                    ReadFile();
+                    break;
+                case "3":
+                    CreateSortArray(CountSizeArray(), 0);
+                case "4":
+                    CreateSortArray(CountSizeArray(), 1);
+                case "5":
+                    CreateSortArray(CountSizeArray(), 2);
+            }
+        }
+    }
+
     public static void main(String[] args) throws Exception {
-        //SaveInFile(Array_Users());
-        ReadFile();
-        CreateSortArray(CountSizeArray(), 1);
+        Scanner scanner = new Scanner(System.in);
+        Command(scanner);
+        scanner.close();
     }
 }
