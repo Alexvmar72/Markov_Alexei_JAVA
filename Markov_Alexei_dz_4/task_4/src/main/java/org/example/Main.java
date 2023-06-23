@@ -105,7 +105,7 @@ public class Main {
             //System.out.println(array);
 
             for (int i = 0; i < array.length; i++) {
-                System.out.println(array[i]);
+                //System.out.println(array[i]);
                 String[] list = array[i]
                         .replace("\"", "")
                         .split(",");
@@ -118,21 +118,16 @@ public class Main {
         Arrays.sort(BuildArray, Comparator.comparing(o -> o[sortIndex]));
         for (int i = 0; i < BuildArray.length; i++)
         {
-            for (int j = 0; (BuildArray[i] != null && j < BuildArray[i].length); j++) {
-                System.out.print(BuildArray[i][j] + " ");
-            }
+            System.out.print("ФИО: " + BuildArray[i][0] + ", возраст: " + BuildArray[i][1] + ", пол: " + BuildArray[i][2]);
             System.out.println();
         }
 
         //System.out.println(Arrays.deepToString(BuildArray));
     }
 
-
     public static void main(String[] args) throws Exception {
         //SaveInFile(Array_Users());
-        //ReadFile();
-        System.out.println("Размер будущего массива: " + CountSizeArray());
+        ReadFile();
         CreateSortArray(CountSizeArray(), 1);
-
     }
 }
