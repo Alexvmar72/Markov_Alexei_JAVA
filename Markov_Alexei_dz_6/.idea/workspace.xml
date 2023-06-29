@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="91527c00-bacf-489c-8300-c5b215d5585e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Markov_Alexei_dz_7/Game_homework/src/main/java/org/example/Attac_class.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Markov_Alexei_dz_7/Game_homework/src/main/java/org/example/Magic_class.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Markov_Alexei_dz_7/Game_homework/src/main/java/org/example/Support_class.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Markov_Alexei_dz_7/Game_homework/src/main/java/org/example/Unit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Markov_Alexei_dz_5/task_5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Markov_Alexei_dz_5/task_5/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2Rsb2SozrymnNt7YNzzLpOLfnGK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "E:/Programming/GB lessons/GB_4544_Developer_Markov/JAVA/Homeworks/Markov_Alexei_dz_6"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="91527c00-bacf-489c-8300-c5b215d5585e" name="Changes" comment="" />
+      <created>1688041528268</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688041528268</updated>
+    </task>
+    <servers />
+  </component>
+</project>
