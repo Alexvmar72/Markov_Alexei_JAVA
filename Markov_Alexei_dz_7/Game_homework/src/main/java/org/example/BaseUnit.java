@@ -1,7 +1,5 @@
 package org.example;
 
-import java.util.Random;
-
 /**
  * Основной класс юнитов
  * */
