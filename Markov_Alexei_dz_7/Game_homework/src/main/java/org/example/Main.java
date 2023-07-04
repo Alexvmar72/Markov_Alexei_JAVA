@@ -15,4 +15,5 @@ public class Main {
         MagicianUnit magician = new MagicianUnit("Паша");
 
     }
+
 }
