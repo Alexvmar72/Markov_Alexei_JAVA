@@ -8,4 +8,10 @@ public class MonkUnit extends BaseUnit{
     }
     public void castMana(){}
 
+    @Override
+    public void getDamage(float damage){
+        hp -= damage;
+        if (hp>=maxHp) hp = maxHp;
+    }
+
 }

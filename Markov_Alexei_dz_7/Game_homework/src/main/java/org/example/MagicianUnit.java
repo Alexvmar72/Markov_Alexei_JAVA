@@ -1,17 +1,10 @@
 package org.example;
 
 public class MagicianUnit extends BaseUnit {
-    private int mana;
-    private int maxMana;
 
-    public MagicianUnit() {
-        super(String.format("Hero_Magician #%d", ++MagicianUnit.number),
-                MagicianUnit.r.nextInt(100, 200));
-        this.maxMana = MagicianUnit.r.nextInt(50, 150);
-        this.mana = maxMana;
+    public MagicianUnitUnit(String name) {
+        super(12, 4, 3, new int[]{-1, -3}, name);
     }
 
-    public String getInfo() {
-        return String.format("%s  Mana: %d",super.getInfo(), this.mana);
-    }
+    public void Mana(){}
 }
