@@ -9,7 +9,14 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        BaseUnit unit = new MonkUnit();
+        MonkUnit unit1 = new MonkUnit();
+        RobberUnit unit2 = new RobberUnit();
+        SpearmanUnit unit3 = new SpearmanUnit();
+        SharpshooterUnit unit4 = new SharpshooterUnit();
+        ArbalesterUnit unit5 = new ArbalesterUnit();
+        CountrymanUnit unit6 = new CountrymanUnit();
+        MagicianUnit unit7 = new MagicianUnit();
+;
 
 
     }
