@@ -3,7 +3,7 @@ package org.example;
  * Монах
  * */
 public class MonkUnit extends BaseUnit{
-    public MonkUnit(){
+    public MonkUnit(String name){
         super(12, 4, 3, new int[]{-1, -3}, name);
     }
     public void castMana(){}

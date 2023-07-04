@@ -6,13 +6,13 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        MonkUnit unit1 = new MonkUnit();
-        RobberUnit unit2 = new RobberUnit();
-        SpearmanUnit unit3 = new SpearmanUnit();
-        SharpshooterUnit unit4 = new SharpshooterUnit();
-        ArbalesterUnit unit5 = new ArbalesterUnit();
-        CountrymanUnit unit6 = new CountrymanUnit();
-        MagicianUnit unit7 = new MagicianUnit();
+        MonkUnit monk = new MonkUnit("Петя");
+        RobberUnit robber = new RobberUnit("Вася");
+        SpearmanUnit spearman = new SpearmanUnit("Федя");
+        SharpshooterUnit sharpshooter = new SharpshooterUnit("Боря");
+        ArbalesterUnit arbalester = new ArbalesterUnit("Миша");
+        CountrymanUnit countryman = new CountrymanUnit("Саша");
+        MagicianUnit magician = new MagicianUnit("Паша");
 
     }
 }
