@@ -1,6 +1,8 @@
 package org.example;
-
-public abstract class Unit {
+/**
+ * Основной класс юнитов
+ * */
+public class base_unit {
     public int health;
     public int attac;
     public int defend;
