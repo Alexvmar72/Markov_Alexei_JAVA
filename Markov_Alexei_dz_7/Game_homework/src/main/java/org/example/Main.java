@@ -3,9 +3,6 @@ package org.example;
 // На базе описания персонажей описать простейшую иерархию классов. В основной программе создать по одному
 // экземпляру каждого класса.
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,8 +13,6 @@ public class Main {
         ArbalesterUnit unit5 = new ArbalesterUnit();
         CountrymanUnit unit6 = new CountrymanUnit();
         MagicianUnit unit7 = new MagicianUnit();
-;
-
 
     }
 }
