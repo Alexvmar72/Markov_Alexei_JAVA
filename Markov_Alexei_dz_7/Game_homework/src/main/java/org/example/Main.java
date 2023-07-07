@@ -13,6 +13,7 @@ public class Main {
         ArbalesterUnit arbalester = new ArbalesterUnit("Миша");
         CountrymanUnit countryman = new CountrymanUnit("Саша");
         MagicianUnit magician = new MagicianUnit("Паша");
+        System.out.println(magician.getInfo());
 
     }
 

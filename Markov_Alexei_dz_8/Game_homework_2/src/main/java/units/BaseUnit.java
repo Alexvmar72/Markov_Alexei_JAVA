@@ -1,9 +1,9 @@
-package org.example;
+package units;
 
 /**
  * Основной класс юнитов
  * */
-public abstract class BaseUnit {
+public abstract class BaseUnit implements InGameInterface {
     String name;
     public float hp;
     public float maxHp;
@@ -19,12 +19,14 @@ public abstract class BaseUnit {
         this.defend = defend;
     }
 
-    public String getInfo(){
-        return String.format("Имя: %s Здоровье: %d Тип объекта: %s", this.name, this.hp, this.getClass().getSimpleName());
-    }
 
     public void getDamage(float damage){
         hp -= damage;
+    }
+
+    @Override
+    public String getInfo() {
+        return name;
     }
 
 }
