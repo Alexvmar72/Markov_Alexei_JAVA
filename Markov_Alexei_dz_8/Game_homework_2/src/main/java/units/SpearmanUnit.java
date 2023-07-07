@@ -11,4 +11,9 @@ public class SpearmanUnit extends BaseUnit {
     public void step() {
 
     }
+
+    @Override
+    public String getInfo() {
+        return "Копейщик " + name;
+    }
 }

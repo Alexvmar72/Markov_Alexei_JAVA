@@ -13,4 +13,8 @@ public class RobberUnit extends BaseUnit {
     public void step() {
 
     }
+    @Override
+    public String getInfo() {
+        return "Разбойник " + name;
+    }
 }

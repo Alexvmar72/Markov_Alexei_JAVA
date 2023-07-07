@@ -11,12 +11,12 @@ public class MagicianUnit extends BaseUnit {
         this.maxMana = this.mana = maxMana;
     }
 
-    public String getInfo() {
-        return String.format("%s Магия: %d", super.getInfo(), this.mana);
+    @Override
+    public void step() {
     }
 
     @Override
-    public void step() {
-
+    public String getInfo() {
+        return "Маг " + name;
     }
 }

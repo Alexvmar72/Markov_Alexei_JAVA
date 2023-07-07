@@ -12,6 +12,10 @@ public class ArbalesterUnit extends BaseUnit {
 
     @Override
     public void step() {
+    }
 
+    @Override
+    public String getInfo() {
+        return "Арбалетчик " + name;
     }
 }

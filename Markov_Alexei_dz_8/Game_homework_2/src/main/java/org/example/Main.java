@@ -8,21 +8,13 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        MonkUnit monk = new MonkUnit("Петя");
-        RobberUnit robber = new RobberUnit("Вася");
-        SpearmanUnit spearman = new SpearmanUnit("Федя");
-        SharpshooterUnit sharpshooter = new SharpshooterUnit("Боря");
-        ArbalesterUnit arbalester = new ArbalesterUnit("Миша");
-        CountrymanUnit countryman = new CountrymanUnit("Саша");
-        MagicianUnit magician = new MagicianUnit("Паша");
-        System.out.println(magician.getInfo());
-
-        int teamCount = 20;
+        int teamCount = 5;
         Random rand = new Random();
 
-
+        System.out.println();
 
         List<BaseUnit> team_red = new ArrayList<>();
+        System.out.println("Команда красных: ");
         for (int i = 0; i < teamCount; i++) {
             int val_r = rand.nextInt(7);
             switch (val_r) {
@@ -51,10 +43,12 @@ public class Main {
                     break;
             }
             System.out.println(team_red.get(i).getInfo());
-
+        }
+            System.out.println();
             List<BaseUnit> team_green = new ArrayList<>();
+            System.out.println("Команда зелёных: ");
             for (int j = 0; j < teamCount; j++) {
-                int val_g = rand.nextInt(4);
+                int val_g = rand.nextInt(7);
                 switch (val_g) {
                     case 0:
                         team_green.add(new MonkUnit(getName()));
@@ -84,7 +78,7 @@ public class Main {
 
             }
         }
-    }
+
 
     private static String getName(){
         String s = String.valueOf(Name.values()[new Random().nextInt(Name.values().length)]);

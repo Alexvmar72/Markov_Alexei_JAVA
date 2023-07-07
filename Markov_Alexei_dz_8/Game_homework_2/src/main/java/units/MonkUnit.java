@@ -19,5 +19,10 @@ public class MonkUnit extends BaseUnit{
 
     }
 
+    @Override
+    public String getInfo() {
+        return "Монах " + name;
+    }
+
 
 }
