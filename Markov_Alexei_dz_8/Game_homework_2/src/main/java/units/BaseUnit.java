@@ -19,11 +19,6 @@ public abstract class BaseUnit implements InGameInterface {
         this.defend = defend;
     }
 
-
-    public void getDamage(float damage){
-        hp -= damage;
-    }
-
     @Override
     public String getInfo() {
         return name;
