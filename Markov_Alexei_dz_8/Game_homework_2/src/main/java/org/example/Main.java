@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        int teamCount = 5;
+        int teamCount = 10;
         Random rand = new Random();
 
         System.out.println();
@@ -37,7 +37,7 @@ public class Main {
                     team_red.add(new SharpshooterUnit(getName()));
                     break;
                 case 6:
-                    team_red.add(new SharpshooterUnit(getName()));
+                    team_red.add(new SpearmanUnit(getName()));
                     break;
                 default:
                     break;
@@ -69,7 +69,7 @@ public class Main {
                         team_green.add(new SharpshooterUnit(getName()));
                         break;
                     case 6:
-                        team_green.add(new SharpshooterUnit(getName()));
+                        team_green.add(new SpearmanUnit(getName()));
                         break;
                     default:
                         break;

@@ -28,5 +28,4 @@ public abstract class BaseUnit implements InGameInterface {
     public String getInfo() {
         return name;
     }
-
 }
