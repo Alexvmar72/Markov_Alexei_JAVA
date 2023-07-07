@@ -13,4 +13,9 @@ public class CountrymanUnit extends BaseUnit {
     public void step() {
 
     }
+
+    @Override
+    public String getInfo() {
+        return "Крестьянин " + name;
+    }
 }

@@ -39,8 +39,7 @@ public class Main {
                 case 6:
                     team_red.add(new SpearmanUnit(getName()));
                     break;
-                default:
-                    break;
+
             }
             System.out.println(team_red.get(i).getInfo());
         }
@@ -71,18 +70,15 @@ public class Main {
                     case 6:
                         team_green.add(new SpearmanUnit(getName()));
                         break;
-                    default:
-                        break;
+
                 }
                 System.out.println(team_green.get(j).getInfo());
 
             }
         }
 
-
     private static String getName(){
         String s = String.valueOf(Name.values()[new Random().nextInt(Name.values().length)]);
         return s;
     }
-
 }
