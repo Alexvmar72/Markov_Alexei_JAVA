@@ -13,22 +13,11 @@
       <change beforePath="$PROJECT_DIR$/Game_homework_2/src/main/java/units/ArbalesterUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/Game_homework_2/src/main/java/units/ArbalesterUnit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_homework_2/src/main/java/units/BaseUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/Game_homework_2/src/main/java/units/BaseUnit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_homework_2/src/main/java/units/CountrymanUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/Game_homework_2/src/main/java/units/CountrymanUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_homework_2/src/main/java/units/InGameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/Game_homework_2/src/main/java/units/InGameInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_homework_2/src/main/java/units/MagicianUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/Game_homework_2/src/main/java/units/MagicianUnit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_homework_2/src/main/java/units/MonkUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/Game_homework_2/src/main/java/units/MonkUnit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_homework_2/src/main/java/units/RobberUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/Game_homework_2/src/main/java/units/RobberUnit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_homework_2/src/main/java/units/SharpshooterUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/Game_homework_2/src/main/java/units/SharpshooterUnit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_homework_2/src/main/java/units/SpearmanUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/Game_homework_2/src/main/java/units/SpearmanUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_homework_2/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Game_homework_2/target/classes/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_homework_2/target/classes/units/ArbalesterUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/Game_homework_2/target/classes/units/ArbalesterUnit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_homework_2/target/classes/units/BaseUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/Game_homework_2/target/classes/units/BaseUnit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_homework_2/target/classes/units/CountrymanUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/Game_homework_2/target/classes/units/CountrymanUnit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_homework_2/target/classes/units/InGameInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/Game_homework_2/target/classes/units/InGameInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_homework_2/target/classes/units/MagicianUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/Game_homework_2/target/classes/units/MagicianUnit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_homework_2/target/classes/units/MonkUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/Game_homework_2/target/classes/units/MonkUnit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_homework_2/target/classes/units/RobberUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/Game_homework_2/target/classes/units/RobberUnit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_homework_2/target/classes/units/SharpshooterUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/Game_homework_2/target/classes/units/SharpshooterUnit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_homework_2/target/classes/units/SpearmanUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/Game_homework_2/target/classes/units/SpearmanUnit.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,14 +51,13 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "E:/Programming/GB lessons/GB_4544_Developer_Markov/JAVA/Homeworks/Markov_Alexei_dz_8",
-    "run.code.analysis.last.selected.profile": "pProject Default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Programming/GB lessons/GB_4544_Developer_Markov/JAVA/Homeworks/Markov_Alexei_dz_8&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Game_homework" />

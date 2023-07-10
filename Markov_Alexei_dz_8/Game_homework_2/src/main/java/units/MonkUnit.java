@@ -1,27 +1,26 @@
 package units;
+
+import java.util.ArrayList;
+
 /**
  * Монах
  * */
-public class MonkUnit extends BaseUnit{
-    public MonkUnit(String name){
-        super(12, 4, 3, new int[]{-1, -3}, name);
+public class MonkUnit extends units.BaseUnit {
+    public MonkUnit(String name, int x, int y){
+        super(12, 4, 3, new int[]{-1, -3}, name, x, y);
     }
     public void castMana(){}
 
-    @Override
-    public void getDamage(float damage){
-        hp -= damage;
-        if (hp>=maxHp) hp = maxHp;
-    }
 
     @Override
-    public void step() {
-
+    public void step(ArrayList<BaseUnit> units) {
+        BaseUnit tmp = nearest(units);
+        System.out.println(tmp.name + " " + coordinates.countDistanse(tmp.coordinates));
     }
 
     @Override
     public String getInfo() {
-        return "Монах " + name;
+        return "Монах " + String.format("%s x: %d y: %d", name, coordinates.x, coordinates.y);
     }
 
 
