@@ -15,7 +15,7 @@ public class MagicianUnit extends BaseUnit {
     }
 
     @Override
-    public void step(ArrayList<BaseUnit> units) {
+    public void step(ArrayList<BaseUnit> units, ArrayList<BaseUnit> units2) {
         BaseUnit tmp = nearest(units);
         System.out.println(tmp.name + " " + coordinates.countDistanse(tmp.coordinates));
     }

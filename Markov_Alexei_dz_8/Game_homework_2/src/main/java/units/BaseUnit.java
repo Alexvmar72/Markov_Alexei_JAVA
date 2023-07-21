@@ -36,6 +36,8 @@ public abstract class BaseUnit implements InGameInterface {
 
     }
 
+
+
     public String getHp() {
         return String.format("Уровень здоровья: %s", hp);
     }
@@ -61,7 +63,7 @@ public abstract class BaseUnit implements InGameInterface {
    }
 
    @Override
-    public void step(ArrayList<BaseUnit> units){
+    public void step(ArrayList<BaseUnit> units, ArrayList<BaseUnit> units2){
 
    }
 }
