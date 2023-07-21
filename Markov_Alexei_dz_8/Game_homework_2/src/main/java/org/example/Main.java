@@ -58,6 +58,7 @@ public class Main {
         }
         System.out.println("Ближайший: ");
         //team_red.forEach(n -> n.step((ArrayList<BaseUnit>) team_green));
+
     }
 
     private static String getName(){

@@ -32,6 +32,6 @@ public class SharpshooterUnit extends BaseUnit {
     @Override
     public String getInfo() {
 
-        return "Снайпер " + super.getInfo() + "имеет стрел: " + arrays;;
+        return "Снайпер " + super.getInfo() + "имеет стрел: " + arrays;
     }
 }
