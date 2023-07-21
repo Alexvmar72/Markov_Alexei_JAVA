@@ -11,10 +11,10 @@ public abstract class BaseUnit implements InGameInterface {
     public float maxHp;
     int attac;
     int defend;
-    int[] damage;
+    int damage;
     Coordinates coordinates;
 
-    public BaseUnit(float maxHp, int attac, int defend, int[] damage, String name, int x, int y) {
+    public BaseUnit(float maxHp, int attac, int defend, int damage, String name, int x, int y) {
         this.name = name;
         this.maxHp = this.hp = maxHp;
         this.attac = attac;
@@ -23,9 +23,17 @@ public abstract class BaseUnit implements InGameInterface {
         coordinates = new Coordinates(x, y);
     }
 
-    public int[] getDamage(){
+    public void doAttack(BaseUnit target){
+        int damage = 1;
+        target.getDamage(damage);
+    }
 
-        return damage;
+    public void getDamage(int damage){
+        if (this.hp - damage > 0){
+            this.hp -= damage;
+        }
+        else {this.hp = 0;}
+
     }
 
     public String getHp() {
@@ -37,6 +45,9 @@ public abstract class BaseUnit implements InGameInterface {
         return String.format("Имя: %s x: %d y: %d", name, coordinates.x, coordinates.y);
     }
 
+    /**
+     * Поиск ближайшего врага
+     */
     public BaseUnit nearest(ArrayList<BaseUnit> units) {
         double nearestDistanse = Double.MAX_VALUE;
         BaseUnit nearestEnemy = null;

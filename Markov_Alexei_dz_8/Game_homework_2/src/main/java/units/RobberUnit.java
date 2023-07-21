@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * */
 public class RobberUnit extends BaseUnit {
     public RobberUnit(String name, int x, int y) {
-        super(12, 4, 3, new int[]{-1, -3}, name, x, y);
+        super(12, 4, 3, -1, name, x, y);
     }
 
     public void Evil(){}

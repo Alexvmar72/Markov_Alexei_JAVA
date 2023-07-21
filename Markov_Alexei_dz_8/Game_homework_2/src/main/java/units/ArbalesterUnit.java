@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class ArbalesterUnit extends BaseUnit {
     public int arrays;
     public ArbalesterUnit(String name, int x, int y) {
-        super(12, 4, 3, new int[]{-1, -3}, name, x, y);
+        super(12, 4, 3, -1, name, x, y);
     }
 
 
@@ -21,7 +21,8 @@ public class ArbalesterUnit extends BaseUnit {
             return;
         }
         BaseUnit tmp = nearest(units);
-        System.out.println(tmp.name);
+        System.out.println("Ближайший враг - "+ tmp.name);
+        doAttack(tmp);
     }
 
     @Override

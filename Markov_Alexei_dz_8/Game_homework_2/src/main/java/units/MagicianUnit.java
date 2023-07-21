@@ -10,7 +10,7 @@ public class MagicianUnit extends BaseUnit {
     private int maxMana;
 
     public MagicianUnit(String name, int x, int y) {
-        super(12, 4, 3, new int[]{-1, -3}, name, x, y);
+        super(12, 4, 3, -1, name, x, y);
         this.maxMana = this.mana = maxMana;
     }
 
