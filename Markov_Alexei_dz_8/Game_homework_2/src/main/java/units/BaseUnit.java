@@ -23,6 +23,15 @@ public abstract class BaseUnit implements InGameInterface {
         coordinates = new Coordinates(x, y);
     }
 
+    public int[] getDamage(){
+
+        return damage;
+    }
+
+    public String getHp() {
+        return String.format("Уровень здоровья: %s", hp);
+    }
+
     @Override
     public String getInfo() {
         return String.format("Имя: %s x: %d y: %d", name, coordinates.x, coordinates.y);

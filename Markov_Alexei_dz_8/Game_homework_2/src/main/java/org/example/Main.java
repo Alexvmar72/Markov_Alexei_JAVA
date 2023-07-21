@@ -60,9 +60,10 @@ public class Main {
         team_red.forEach(n -> n.step((ArrayList<BaseUnit>) team_green));
     }
 
-
     private static String getName(){
         String s = String.valueOf(Name.values()[new Random().nextInt(Name.values().length)]);
         return s;
     }
+
+
 }
