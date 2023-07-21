@@ -32,6 +32,6 @@ public class ArbalesterUnit extends BaseUnit {
 
     @Override
     public String getInfo() {
-        return "Арбалетчик " + String.format("%s x: %d y: %d", name, coordinates.x, coordinates.y);
+        return "Арбалетчик " + super.getInfo() + "имеет стрел: " + arrays;
     }
 }

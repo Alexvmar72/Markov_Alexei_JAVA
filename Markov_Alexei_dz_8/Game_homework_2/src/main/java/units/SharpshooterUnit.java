@@ -31,6 +31,7 @@ public class SharpshooterUnit extends BaseUnit {
 
     @Override
     public String getInfo() {
-        return "Снайпер " + String.format("%s x: %d y: %d", name, coordinates.x, coordinates.y);
+
+        return "Снайпер " + super.getInfo() + "имеет стрел: " + arrays;;
     }
 }
