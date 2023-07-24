@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * */
 public class CountrymanUnit extends BaseUnit {
     public CountrymanUnit(String name, int x, int y){
-        super(12, 1, 1, -1, 2, true, name, x, y, "ready");
+        super(12, 1, 1, -1, 2, true, name, x, y, "ready", 1);
     }
 
     @Override
@@ -18,8 +18,12 @@ public class CountrymanUnit extends BaseUnit {
     @Override
 
     public void step(ArrayList<BaseUnit> units, ArrayList<BaseUnit> units2) {
-        if (isAlive) state = "ready";
+        if (isAlive) {state = "ready";} else return;
         BaseUnit tmp = nearest(units);
-        System.out.println(tmp.name + " " + coordinates.countDistanse(tmp.coordinates));
+        if ((int) coordinates.countDistanse(tmp.coordinates) > attac) {
+            move(tmp.coordinates, units);
+            state = "Moving";
+        }
+
     }
 }

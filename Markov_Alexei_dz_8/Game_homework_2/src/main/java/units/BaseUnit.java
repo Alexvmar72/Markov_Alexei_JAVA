@@ -17,10 +17,10 @@ public abstract class BaseUnit implements InGameInterface {
     public boolean isAlive;
     //public String status = "Stand";
     Coordinates coordinates;
-
     String state;
+    int moveDistance;
 
-    public BaseUnit(float maxHp, int attac, int defend, int damage, int speed, boolean isAlive, String name, int x, int y, String state) {
+    public BaseUnit(float maxHp, int attac, int defend, int damage, int speed, boolean isAlive, String name, int x, int y, String state, int moveDistance) {
         this.name = name;
         this.maxHp = this.hp = maxHp;
         this.attac = attac;
@@ -30,6 +30,7 @@ public abstract class BaseUnit implements InGameInterface {
         this.isAlive = isAlive;
         coordinates = new Coordinates(x, y);
         this.state = state;
+        this.moveDistance = moveDistance;
     }
 
     public void doAttack(BaseUnit target){
@@ -86,6 +87,14 @@ public abstract class BaseUnit implements InGameInterface {
 
     public int[] getCoords() {
         return new int[] {coordinates.x, coordinates.y};
+    }
+
+    public void move(Coordinates targetPosition, ArrayList<BaseUnit> team) {
+        if (!coordinates.containsByPos(coordinates.newPosition(targetPosition, team), team)) {
+            for (int i = 0; i < moveDistance; i++) {
+                coordinates = coordinates.newPosition(targetPosition, team);
+            }
+        }
     }
     public float getHp(){
         return hp;

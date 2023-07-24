@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Копейщик */
 public class SpearmanUnit extends BaseUnit {
     public SpearmanUnit(String name, int x, int y){
-        super(12, 4, 3, -1, 2, true, name, x, y, "ready");
+        super(12, 4, 3, -1, 2, true, name, x, y, "ready", 1);
     }
     public void Accuracy(){}
 

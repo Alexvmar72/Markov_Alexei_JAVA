@@ -9,7 +9,7 @@ public class SharpshooterUnit extends BaseUnit {
 
     public int arrays;
     public SharpshooterUnit(String name, int x, int y) {
-        super(12, 5, 2, -1, 2, true, name, x, y, "ready");
+        super(12, 5, 2, -1, 2, true, name, x, y, "ready", 1);
     }
 
     public void Accuracy(){}
