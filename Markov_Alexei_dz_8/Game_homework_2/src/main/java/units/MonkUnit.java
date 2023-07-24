@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * */
 public class MonkUnit extends units.BaseUnit {
     public MonkUnit(String name, int x, int y){
-        super(12, 4, 3, -1, name, x, y);
+        super(12, 4, 3, -1, 2, true, name, x, y, "ready");
     }
     public void castMana(){}
 

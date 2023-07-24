@@ -9,9 +9,8 @@ import java.util.ArrayList;
 public class ArbalesterUnit extends BaseUnit {
     public int arrays;
     public ArbalesterUnit(String name, int x, int y) {
-        super(12, 4, 3, -1, name, x, y);
+        super(12, 4, 3, -1, 2, true, name, x, y, "ready");
     }
-
 
     public void fire(){}
 
@@ -25,13 +24,21 @@ public class ArbalesterUnit extends BaseUnit {
         doAttack(tmp);
         if (units2.contains(CountrymanUnit.class)){
             return;
-
         }
         arrays --;
+
+        for (BaseUnit unit: units) {
+            if (unit instanceof CountrymanUnit && unit.state == "ready") {
+                arrays += 1;
+                unit.state = "Buse";
+                System.out.println(getInfo() + " принёс стрелу для " + unit.getInfo() + " Крестьянин " + unit.state);
+                return;
+            }
+        }
     }
 
     @Override
     public String getInfo() {
-        return "Арбалетчик " + super.getInfo() + "имеет стрел: " + arrays;
+        return "Арбалетчик " + super.getInfo() + " имеет стрел: " + arrays;
     }
 }

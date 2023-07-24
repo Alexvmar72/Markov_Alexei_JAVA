@@ -9,7 +9,7 @@ public class SharpshooterUnit extends BaseUnit {
 
     public int arrays;
     public SharpshooterUnit(String name, int x, int y) {
-        super(12, 5, 2, -1, name, x, y);
+        super(12, 5, 2, -1, 2, true, name, x, y, "ready");
     }
 
     public void Accuracy(){}
@@ -27,11 +27,20 @@ public class SharpshooterUnit extends BaseUnit {
 
         }
         arrays --;
+
+        for (BaseUnit unit: units2) {
+            if (unit instanceof CountrymanUnit && unit.state == "ready") {
+                arrays += 1;
+                unit.state = "buse";
+                System.out.println(getInfo() + " принёс стрелу для " + unit.getInfo());
+                return;
+            }
+        }
     }
 
     @Override
     public String getInfo() {
 
-        return "Снайпер " + super.getInfo() + "имеет стрел: " + arrays;
+        return "Снайпер " + super.getInfo() + " имеет стрел: " + arrays;
     }
 }

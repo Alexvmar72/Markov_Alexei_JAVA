@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * */
 public class RobberUnit extends BaseUnit {
     public RobberUnit(String name, int x, int y) {
-        super(12, 4, 3, -1, name, x, y);
+        super(12, 4, 3, -1, 2, true, name, x, y, "ready");
     }
 
     public void Evil(){}
@@ -16,6 +16,7 @@ public class RobberUnit extends BaseUnit {
     public void step(ArrayList<BaseUnit> units, ArrayList<BaseUnit> units2) {
         BaseUnit tmp = nearest(units);
         System.out.println(tmp.name + " " + coordinates.countDistanse(tmp.coordinates));
+
     }
     @Override
     public String getInfo() {

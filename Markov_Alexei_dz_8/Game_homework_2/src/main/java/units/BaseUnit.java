@@ -1,5 +1,6 @@
 package units;
 
+import javax.swing.plaf.nimbus.State;
 import java.util.ArrayList;
 
 /**
@@ -12,15 +13,23 @@ public abstract class BaseUnit implements InGameInterface {
     int attac;
     int defend;
     int damage;
+    int speed;
+    public boolean isAlive;
+    //public String status = "Stand";
     Coordinates coordinates;
 
-    public BaseUnit(float maxHp, int attac, int defend, int damage, String name, int x, int y) {
+    String state;
+
+    public BaseUnit(float maxHp, int attac, int defend, int damage, int speed, boolean isAlive, String name, int x, int y, String state) {
         this.name = name;
         this.maxHp = this.hp = maxHp;
         this.attac = attac;
         this.damage = damage;
         this.defend = defend;
+        this.speed = speed;
+        this.isAlive = isAlive;
         coordinates = new Coordinates(x, y);
+        this.state = state;
     }
 
     public void doAttack(BaseUnit target){
@@ -28,18 +37,21 @@ public abstract class BaseUnit implements InGameInterface {
         target.getDamage(damage);
     }
 
-    public void getDamage(int damage){
-        if (this.hp - damage > 0){
-            this.hp -= damage;
+    public void getDamage(int doneDamage){
+        if (this.defend > 0){
+            if (this.defend - doneDamage > 0)
+                this.defend -= doneDamage;
+            else {
+                doneDamage -=this.defend;
+                this.hp -= doneDamage;
+                this.defend = 0;
+            }
         }
-        else {this.hp = 0;}
-
-    }
-
-
-
-    public String getHp() {
-        return String.format("Уровень здоровья: %s", hp);
+        this.hp -= doneDamage;
+        if (hp < 0){
+            hp = 0;
+            this.state = "die";
+        }
     }
 
     @Override
@@ -64,6 +76,25 @@ public abstract class BaseUnit implements InGameInterface {
 
    @Override
     public void step(ArrayList<BaseUnit> units, ArrayList<BaseUnit> units2){
-
    }
+   public String toString(){
+        return this.getClass().getSimpleName();
+   }
+   public int compareTo(BaseUnit o) {
+        return o.speed-this.speed;
+   }
+
+    public int[] getCoords() {
+        return new int[] {coordinates.x, coordinates.y};
+    }
+    public float getHp(){
+        return hp;
+    }
+
+    public boolean die() {
+        if (this.state == "die") {
+            return true;
+        }
+        return false;
+    }
 }
