@@ -9,8 +9,8 @@ import java.util.Random;
 public class MagicianUnit extends BaseUnit {
     private int mana, attac;
 
-    public MagicianUnit(String name, int x, int y) {
-        super(12, 4, 3,  true, name, x, y, "ready", 1);
+    public MagicianUnit(String name, int x, int y, int speed) {
+        super(70, 5, speed,  true, name, x, y, "ready", 1);
         this.mana = 50;
         this.attac = 1;
     }

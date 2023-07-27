@@ -8,8 +8,8 @@ import java.util.ArrayList;
 public class SharpshooterUnit extends BaseUnit {
 
     protected int arrays, attac, timeToLoad;
-    public SharpshooterUnit(String name, int x, int y) {
-        super(12, 2, 1, true, name, x, y, "ready", 1);
+    public SharpshooterUnit(String name, int x, int y, int speed) {
+        super(12, 2, speed + 3, true, name, x, y, "ready", 1);
         this.attac = 50;
         this.arrays = 50;
         this.timeToLoad = 1;

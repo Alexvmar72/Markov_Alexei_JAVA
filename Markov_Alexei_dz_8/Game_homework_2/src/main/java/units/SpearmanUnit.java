@@ -7,8 +7,8 @@ import java.util.ArrayList;
 public class SpearmanUnit extends BaseUnit {
 
     protected int attacLevel, attac;
-    public SpearmanUnit(String name, int x, int y){
-        super(12, 1, 1,  true, name, x, y, "ready", 1);
+    public SpearmanUnit(String name, int x, int y, int speed){
+        super(12, 1, speed + 4,  true, name, x, y, "ready", 1);
         this.attacLevel = 100;
         this.attac = 100;
     }

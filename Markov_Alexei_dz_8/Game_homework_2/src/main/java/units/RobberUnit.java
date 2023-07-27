@@ -7,8 +7,8 @@ import java.util.ArrayList;
  * */
 public class RobberUnit extends BaseUnit {
     protected int attacLevel, attac;
-    public RobberUnit(String name, int x, int y) {
-        super(12, 1, 1, true, name, x, y, "ready", 1);
+    public RobberUnit(String name, int x, int y, int speed) {
+        super(12, 1, speed + 4, true, name, x, y, "ready", 1);
         this.attacLevel = 100;
         this.attac = 100;
     }

@@ -7,9 +7,9 @@ import java.util.ArrayList;
  * */
 public class MonkUnit extends units.BaseUnit {
     protected int mana;
-    public MonkUnit(String name, int x, int y){
-        super(12, 4, 3,  true, name, x, y, "ready", 1);
-        this.mana = 5;
+    public MonkUnit(String name, int x, int y, int speed){
+        super(12, 1, speed,  true, name, x, y, "ready", 1);
+        this.mana = 50;
     }
 
     @Override
@@ -33,6 +33,6 @@ public class MonkUnit extends units.BaseUnit {
 
     @Override
     public String getInfo() {
-        return "Монах " + String.format("%s x: %d y: %d", name, coordinates.x, coordinates.y);
+        return "Монах " + String.format("%s x: %d y: %d mana: %d", name, coordinates.x, coordinates.y, mana);
     }
 }

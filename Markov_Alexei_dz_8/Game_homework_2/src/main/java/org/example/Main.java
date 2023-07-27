@@ -20,16 +20,16 @@ public class Main {
             int val_r = rand.nextInt(4);
             switch (val_r) {
                 case 0:
-                    team_red.add(new MagicianUnit(getName(), 1, i));
+                    team_red.add(new MagicianUnit(getName(), 1, i, rand.nextInt(21)));
                     break;
                 case 1:
-                    team_red.add(new RobberUnit(getName(), 1, i));
+                    team_red.add(new RobberUnit(getName(), 1, i, rand.nextInt(21)));
                     break;
                 case 2:
-                    team_red.add(new CountrymanUnit(getName(), 1, i));
+                    team_red.add(new CountrymanUnit(getName(), 1, i, rand.nextInt(21)));
                     break;
                 case 3:
-                    team_red.add(new SharpshooterUnit(getName(), 1, i));
+                    team_red.add(new SharpshooterUnit(getName(), 1, i, rand.nextInt(21)));
                     break;
             }
             System.out.println(team_red.get(i).getInfo());
@@ -40,16 +40,16 @@ public class Main {
             int val_g = rand.nextInt(4);
             switch (val_g) {
                 case 0:
-                    team_green.add(new MonkUnit(getName(), 10, j));
+                    team_green.add(new MonkUnit(getName(), 10, j, rand.nextInt(21)));
                     break;
                 case 1:
-                    team_green.add(new ArbalesterUnit(getName(), 10, j));
+                    team_green.add(new ArbalesterUnit(getName(), 10, j, rand.nextInt(21)));
                     break;
                 case 2:
-                    team_green.add(new CountrymanUnit(getName(), 10, j));
+                    team_green.add(new CountrymanUnit(getName(), 10, j, rand.nextInt(21)));
                     break;
                 case 3:
-                    team_green.add(new SpearmanUnit(getName(), 10, j));
+                    team_green.add(new SpearmanUnit(getName(), 10, j, rand.nextInt(21)));
                     break;
             }
             System.out.println(team_green.get(j).getInfo());

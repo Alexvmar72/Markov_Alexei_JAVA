@@ -7,8 +7,8 @@ import java.util.ArrayList;
  * */
 public class CountrymanUnit extends BaseUnit {
     protected int attac, actionPriority;
-    public CountrymanUnit(String name, int x, int y){
-        super(12, 1, 1, true, name, x, y, "ready", 1);
+    public CountrymanUnit(String name, int x, int y, int speed){
+        super(12, 1, speed, true, name, x, y, "ready", 1);
         this.attac = attac;
         this.actionPriority = actionPriority;
     }

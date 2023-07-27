@@ -9,8 +9,8 @@ import java.util.ArrayList;
 public class ArbalesterUnit extends BaseUnit {
     protected int arrays, attac, timeToLoad;
 
-    public ArbalesterUnit(String name, int x, int y) {
-        super(12, 4, 1, true,  name, x, y, "ready", 1);
+    public ArbalesterUnit(String name, int x, int y, int speed) {
+        super(12, 4, speed +3, true,  name, x, y, "ready", 1);
 
     this.attac = 50;
     this.arrays = 50;
