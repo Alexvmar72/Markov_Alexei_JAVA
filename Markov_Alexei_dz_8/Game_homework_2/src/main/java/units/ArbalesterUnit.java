@@ -7,34 +7,46 @@ import java.util.ArrayList;
   */
 
 public class ArbalesterUnit extends BaseUnit {
-    public int arrays;
-    public ArbalesterUnit(String name, int x, int y) {
-        super(12, 4, 3, -1, 2, true, name, x, y, "ready", 1);
-    }
+    protected int arrays, attac, timeToLoad;
 
-    public void fire(){}
+    public ArbalesterUnit(String name, int x, int y) {
+        super(12, 4, 1, true,  name, x, y, "ready", 1);
+
+    this.attac = 50;
+    this.arrays = 50;
+    this.timeToLoad = 1;
+    }
 
     @Override
     public void step(ArrayList<BaseUnit> units, ArrayList<BaseUnit> units2) {
-        if (hp == 0 || arrays == 0) {
-            return;
-        }
-        BaseUnit tmp = nearest(units);
-        System.out.println("Ближайший враг - "+ tmp.name);
-        doAttack(tmp);
-        if (units2.contains(CountrymanUnit.class)){
-            return;
-        }
-        arrays --;
+        BaseUnit tmp = nearest(units2);
+        if (isAlive) {
+            for (BaseUnit unit: units) {
+                if (unit instanceof CountrymanUnit && unit.state == "Stand" && arrays < 20) {
+                    arrays += 1;
+                    unit.state = "Busy";
+                    return;
+                }
+            }
 
-        for (BaseUnit unit: units) {
-            if (unit instanceof CountrymanUnit && unit.state == "ready") {
-                arrays += 1;
-                unit.state = "Buse";
-                System.out.println(getInfo() + " принёс стрелу для " + unit.getInfo() + " Крестьянин " + unit.state);
+            if ((int) coordinates.countDistanse(tmp.coordinates) <= attac) {
+                if (arrays > 0 && attac != 1) {
+                    if (attac == 1) tmp.getDamage(1);
+                    else tmp.getDamage(damage);
+                    arrays -= 1;
+                    state = "Attack";
+                    return;
+                } else {
+                    attac = 1;
+                    state = "->Melee";
+                }
+            } else {
+                move(tmp.coordinates, units);
+                state = "Moving";
                 return;
             }
         }
+        return;
     }
 
     @Override

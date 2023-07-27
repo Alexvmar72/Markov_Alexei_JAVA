@@ -7,35 +7,44 @@ import java.util.ArrayList;
  * */
 public class SharpshooterUnit extends BaseUnit {
 
-    public int arrays;
+    protected int arrays, attac, timeToLoad;
     public SharpshooterUnit(String name, int x, int y) {
-        super(12, 5, 2, -1, 2, true, name, x, y, "ready", 1);
+        super(12, 2, 1, true, name, x, y, "ready", 1);
+        this.attac = 50;
+        this.arrays = 50;
+        this.timeToLoad = 1;
     }
-
-    public void Accuracy(){}
 
     @Override
     public void step(ArrayList<BaseUnit> units, ArrayList<BaseUnit> units2) {
-        if (hp == 0 || arrays == 0) {
-            return;
-        }
-        BaseUnit tmp = nearest(units);
-        System.out.println("Ближайший враг - "+ tmp.name);
-        doAttack(tmp);
-        if (units2.contains(CountrymanUnit.class)){
-            return;
+        BaseUnit tmp = nearest(units2);
+        if (isAlive) {
+            for (BaseUnit unit: units) {
+                if (unit instanceof CountrymanUnit && unit.state == "Stand" && arrays < 20) {
+                    arrays += 1;
+                    unit.state = "Busy";
+                    return;
+                }
+            }
 
-        }
-        arrays --;
-
-        for (BaseUnit unit: units2) {
-            if (unit instanceof CountrymanUnit && unit.state == "ready") {
-                arrays += 1;
-                unit.state = "buse";
-                System.out.println(getInfo() + " принёс стрелу для " + unit.getInfo());
+            if ((int) coordinates.countDistanse(tmp.coordinates) <= attac) {
+                if (arrays > 0 && attac != 1) {
+                    if (attac == 1) tmp.getDamage(1);
+                    else tmp.getDamage(damage);
+                    arrays -= 1;
+                    state = "Attack";
+                    return;
+                } else {
+                    attac = 1;
+                    state = "->Melee";
+                }
+            } else {
+                move(tmp.coordinates, units);
+                state = "Moving";
                 return;
             }
         }
+        return;
     }
 
     @Override

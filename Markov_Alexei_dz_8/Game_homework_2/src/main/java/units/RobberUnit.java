@@ -6,16 +6,27 @@ import java.util.ArrayList;
  * Разбойник
  * */
 public class RobberUnit extends BaseUnit {
+    protected int attacLevel, attac;
     public RobberUnit(String name, int x, int y) {
-        super(12, 4, 3, -1, 2, true, name, x, y, "ready", 1);
+        super(12, 1, 1, true, name, x, y, "ready", 1);
+        this.attacLevel = 100;
+        this.attac = 100;
     }
 
-    public void Evil(){}
 
     @Override
     public void step(ArrayList<BaseUnit> units, ArrayList<BaseUnit> units2) {
-        BaseUnit tmp = nearest(units);
-        System.out.println(tmp.name + " " + coordinates.countDistanse(tmp.coordinates));
+        if (!isAlive) return;
+        BaseUnit tmp = nearest(units2);
+        if (coordinates.countDistanse(tmp.coordinates) <= attac) {
+            for (int i = 0; i < attacLevel; i++) {
+                tmp.getDamage(damage);
+            }
+            state = "Attack";
+        } else {
+            move(tmp.coordinates, units);
+            state = "Moving";
+        }
 
     }
     @Override

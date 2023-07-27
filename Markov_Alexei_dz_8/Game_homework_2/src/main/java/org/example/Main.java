@@ -31,7 +31,6 @@ public class Main {
                 case 3:
                     team_red.add(new SharpshooterUnit(getName(), 1, i));
                     break;
-
             }
             System.out.println(team_red.get(i).getInfo());
         }
